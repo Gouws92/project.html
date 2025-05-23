@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <style>
+        h1 {
+            color: rgb(226, 141, 226);
+            font-size: 34px;
+            line-height: 48px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #df7b7b;
+         }
+         h2 {
+            margin: 0;
+            font-size: 34px;
+            line-height: 48px;
+            font-weight: 400;
+            text-align: center;
+            text-decoration: dotted;
+            color: purple;
+            padding: 10px;
+            border: 1px solid lightgrey;
+            border-radius: 2px;
+         }
+         img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 20px;
+            max-width: 50%;
+            padding: 10px;
+         }
+         p {
+            text-align: center;
+         }
+         li {
+            list-style: none;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 10px;
+            transition: all 200ms ease-in-out;
+            max-width: 400px;
+            margin: 0 15px;
+            display: inline;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        li:hover {
+            background: #e9e2cf;
+        }
+        .Pawn {
+            color: blue;
+        }
+
+        .Biship {
+            color: red;
+        }
+
+        .King {
+            color: green;
+        }
+        .Rook {
+            color: purple;
+        }
+
+        .Bishop  {
+            color: orange;
+        }
+ 
+        .Queen {
+            color: pink;
+        }
+        .Knight {
+            color: yellowgreen;
+        }
+        body {
+            background-image:  linear-gradient(to top,#eeb7e9 5%, #b6818a 100%);
+            width: 50%;
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 80px auto;
+         }
+         button {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #9a1ad6;
+            background: #d61abd;
+            color: #fff;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 16px 24px;
+            border-radius: 30px;
+            transition: all 200ms ease;
+            padding: 15px 15px;
+            box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+            cursor: pointer;
+        }
+        button :hover {
+            background: white;
+            color: #1a64d6;
+            border: 1px solid #1a64d6;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .play-chess {
+            display: block;
+            margin: 15px;
+            text-decoration: none;
+        }
+        .play-chess:hover {
+            text-decoration: underline;
+        }
+        .board {
+            border: 2px solid;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .square {
+            font-size: 20px;
+            color: #5a1196;
+        }
+        .pieces {
+            font-size: 25px;
+            color:#b984e4;
+            text-decoration: underline;
+        }
+        .black {
+            font-size: 20px;
+            text-decoration: underline;
+            color: #c44249;
+        }
+        .white {
+            font-size: 20px;
+            text-decoration: underline;
+            color: #430e47;
+        }
+        .Horz-list {
+            font-size: 2em;
+        }
+        .Vert-list {
+             font-size: 2em;
+        }
+        .NWU-News {
+            margin-top: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .NWU-News :hover{
+            text-decoration: underline;
+        }
+        .container {
+            text-align: center;
+        }
+        .girl {
+            display:block;
+            border: 1px solid rgb(214, 135, 204);
+            margin: 5px;
+        }
+        .girl :hover {
+            border: lightgrey; 
+        }
+        .girl img {
+            display: block;
+            width: 50%;
+        }
+        .link {
+            margin-top: 10px;
+            display: block;
+            text-decoration: none;
+            color: #8f0e9b;
+         }
+        .link :hover {
+            text-decoration: underline;
+        }
+        .personal {
+            font-size: 15px;
+            line-height: 1.5;
+            border: 2px solid;
+        }
+        .Veronica-Gouws {
+            color: #6e0e9b;
+        }
+        .mail {
+            text-align: center;
+            font-size: 17px;
+            padding: 1px;
+            color: #df7b7b;
+        }
+        .mode {
+            color: rgb(48, 112, 165); 
+        }
+    </style>
+</head>
+<body style="background-color: #e9e2cf;">
+<h1 style="background-color: rgb(139, 113, 139);border:1px solid">
+   <strong>Welcome to Veronica's Chess Club</strong> 
+</h1>
+<h2>
+    <strong>
+        What is a Chess Game?
+    </strong>
+    </h2>
+    <p class="board">
+        <strong>Chess</strong>
+    is a game for two players. Chess is known as a war or an army against <strong>whites</strong> and <strong>blacks</strong> The main goal of chess is
+    to <strong>checkmate</strong> the king of the opponent. One player will choose white and the other will choose black pieces. The chess
+    board has a white color square on the bottom right-hand side of each player and has a total of <strong>64 squares</strong> which consists
+    of two types of squares, which are <strong>light squares</strong> and <strong>dark squares</strong>. <strong>Chess boards</strong> have letters and numbers on the board
+    which are used to describe the parts of the chessboard.
+    <br />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/540/original/Chess_board.png?1706445539" alt="Chess board"
+        Width="300" />
+        <em><strong class="square">Chess Board</strong></em>
+        <br />
+        <br />
+        <strong>Pawns</strong> occupy the second row (or rank). The <strong>King</strong> is placed on the remaining square, 
+        the <strong>Rooks </strong> in the corners, the <strong>Knights</strong> adjacent to them, the <strong>Bishops</strong>, and lastly the <strong>Queen</strong>, who always matches her own color (black queen on black, white queen
+        on white).
+        <hr />
+        <p class="pieces">
+            <strong>
+                Chess Pieces Names
+            </strong>
+        </P>
+        <ul class="horizontal-list">
+            <li>
+                <a href=" https://www.chess.com/terms/chess-pieces
+                        target=" _blank" class="Pawn">
+                    Pawn
+                </a>
+            </li>
+            <li>
+                <a href=" https://www.chess.com/terms/chess-pieces
+                        target=" _blank" class="Bishop">
+                    Bishop
+                </a>
+            </li>
+            <li>
+                <a href=" https://www.chess.com/terms/chess-pieces
+                        target=" _blank" class="Knight">
+                    Knight
+                </a>
+            </li>
+            <li>
+                <a href=" https://www.chess.com/terms/chess-pieces
+                        target=" _blank" class="Rook">
+                    Rook
+                </a>
+            </li>
+            <li>
+                <a href=" https://www.chess.com/terms/chess-pieces
+                       target=" _blank" class="King">
+                    King
+                </a>
+            </li>
+            <li>
+                <a href=" https://www.chess.com/terms/chess-pieces
+                      target=" _blank" class="Queen">
+                    Queen
+                </a>
+            </li>
+        </ul>
+        <p class="black">Black Pieces</p>
+        <ul class="Horz-list">
+            <li>
+                ♟
+            </li>
+            <li>
+                ♝
+            </li>
+            <li>
+                ♞
+            </li>
+            <li>
+                ♜
+            </li>
+            <li>
+                ♚
+            </li>
+            <li>
+                ♛
+            </li>
+        </ul>
+        <p class="white">White Pieces</p>
+        <ul class="Vert-list">
+            <li>
+                ♙
+            </li>
+            <li>
+                ♗
+            </li>
+            <li>
+                ♘
+            </li>
+            <li>
+                ♖
+            </li>
+            <li>
+                ♔
+            </li>
+            <li>
+                ♕
+            </li>
+        </ul>
+        <hr />
+        <p class="personal">
+        I am <strong>Veronica Gouws</strong>, from <strong>South Africa</strong> and I am a <strong>Chess Player</strong>. My journey in playing 
+        chess commenced when I was in grade 4 during my primary school. 
+        The <strong>National Chess Tournament</strong> I took part in was the year 2008 held <strong>Cape Town</strong>, during my high school years.
+        Throughout my university experience, my commitment to chess has garnered numerous <strong>accolades</strong>, <strong>medals</strong>, and <strong>trophies</strong>. See the picture below,
+        when I was playing <strong>Russian Chess</strong> in 2018, in <strong>Russia</strong>.
+        </p>
+        <div class="girl">
+            <a target="_blank"
+                href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/537/original/Veronica_Playing_Chess.jpg?1706445002">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/537/original/Veronica_Playing_Chess.jpg?1706445002"
+                    alt="Veronica Playing Russian Chess" Width="300" />
+            </a>
+        </div>
+        <p class="NWU-News">
+            <a href="https://news.nwu.ac.za/veronica-knows-how-capture-king" target="_blank" 
+            class=" NWU-News">
+                Veronica Knows How to Capture a King </a>
+        </p>
+            <p>
+            <button>
+            🏁 Lets play
+            </button>
+        </P>
+        <p class="Veronica-Gouws">
+            <strong>
+                This page was built by:
+            </strong>
+        </p>
+        <p class="link">
+            <em><a href="https://www.linkedin.com/in/veronica-gouws-812146161" target="_blank" class="link">
+                Veronica Gouws </a></em>
+        </p>
+        <div class="mail">
+            <span class="mode">Email:</span>
+            kgabeyvero@gmail.com
+        </div>
+        <script>
+            function Letsplay() {
+                    let yourName = prompt("What is your name?");
+                    let country = prompt("Which country are you from?");
+                    let age = prompt ("How old are you?")
+                    let h1 = document.querySelector("h1");
+                    if (age >= 18) {
+                        alert(h1.innerHTML = " Hi " + yourName + "  Welcome to Opening Chess Tournament 👑");
+                    } else {
+                        alert(h1.innerHTML = " Hi " + yourName + "  Welcome to Junior Chess Tournament 👑");
+                    }
+                }
+                let LetsplayButton = document.querySelector("button");
+                LetsplayButton.addEventListener("click", Letsplay);
+        </script>
+</body>
+</html>
